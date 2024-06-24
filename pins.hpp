@@ -1,7 +1,6 @@
 #ifndef PINS_HPP
 #define PINS_HPP
 
-#include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 #include "hardware/adc.h"
 #include "hardware/pwm.h"
@@ -44,7 +43,6 @@ class Led{
                 toggle();
                 sleep_ms(100);
             }
-            
         }
 };
 
@@ -127,7 +125,7 @@ class AnalogOut{
 class AnalogIn{
     private:
         uint pin;
-        uint channel;
+        uint channel; // 0 for GP26, 1 for GP27, 2 for GP28, 3 for GP29
     public:
         AnalogIn(uint pin, uint channel){
             this->pin = pin;
