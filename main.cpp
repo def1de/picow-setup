@@ -1,18 +1,15 @@
 #include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
 #include "pins.hpp"
+#include <cmath>
+#include <cstdio>
 
-int main(){
+int main() {
     stdio_init_all();
 
-    Led led;
-
-
-    while (true)
-    {
-        led.toggle();
-        sleep_ms(500);
+    while (true) {
+        Led::toggle();
+        printf("Hello, world!\n");
+        sleep_ms(1000);
     }
-
     return 1;
 }

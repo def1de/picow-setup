@@ -17,10 +17,10 @@ add_executable(mainexec # Create an executable
 pico_enable_stdio_usb(mainexec 1) # Enable USB output
 pico_enable_stdio_uart(mainexec 0) # Disable UART output
 
-pico_add_extra_outputs(mainexec) # Add extra outputs
-
 # Include the current directory
 target_include_directories(mainexec PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
+pico_add_extra_outputs(mainexec) # Add extra outputs
+
 # Link the libraries
-target_link_libraries(mainexec pico_cyw43_arch_lwip_threadsafe_background pico_stdlib)
+target_link_libraries(mainexec pico_cyw43_arch_lwip_threadsafe_background pico_stdlib hardware_adc hardware_pwm hardware_clocks)
