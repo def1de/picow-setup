@@ -11,4 +11,4 @@ Helps you to start with developing for raspberry pi pico (W) using pico-sdk and 
 - Copy over `mainexec.uf2` to your pico board
 - Enjoy your first pico W project
 
-**Note that this repository includes pre-designed classes to further assist and simplify development process. Read wiki to learn more**
+**Please note that this repository includes pre-designed classes to further assist and simplify development process. Read wiki to learn more**
